@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Events - All Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./Assets/JS/script.js" defer></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-theme-nav>
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="./Assets/IMG/logo.png" width="50" height="50" class="me-2" alt="Logo">
+      City Events
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+      </ul>
+
+
+      <div class="d-flex align-items-center ms-3">
+
+        <button id="btn-en" class="btn btn-link p-0 me-2">
+          <img src="./Assets/IMG/usa.png" width="26" alt="English">
+        </button>
+
+        <button id="btn-ar" class="btn btn-link p-0 me-3">
+          <img src="./Assets/IMG/syria_new.png" width="26" alt="Arabic">
+        </button>
+
+
+        <div class="form-check form-switch me-4">
+          <input class="form-check-input" type="checkbox" id="darkSwitch">
+          <label class="form-check-label" for="darkSwitch">Dark</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold">All Events</h2>
+  </div>
+</section>
+
+
+<section class="container mb-4">
+  <div class="row g-2 justify-content-center">
+    <div class="col-md-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search by title, venue...">
+    </div>
+    <div class="col-md-3">
+      <select id="filterCategory" class="form-select">
+        <option value="all">All Categories</option>
+        <option value="music">Music</option>
+        <option value="sports">Sports</option>
+        <option value="art">Art</option>
+        <option value="culture">Culture</option>
+        <option value="food">Food</option>
+        <option value="family">Family</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select id="filterProvince" class="form-select">
+        <option value="all">All Provinces</option>
+        <option value="damascus">Damascus</option>
+        <option value="aleppo">Aleppo</option>
+        <option value="homs">Homs</option>
+        <option value="hama">Hama</option>
+        <option value="latakia">Latakia</option>
+        <option value="tartus">Tartous</option>
+        <option value="idlib">Idlib</option>
+        <option value="daraa">Daraa</option>
+        <option value="sweida">Sweida</option>
+        <option value="deir-ezzor">Deir Ezzor</option>
+        <option value="raqqa">Raqqa</option>
+        <option value="hasakah">Hasakah</option>
+        <option value="quneitra">Quneitra</option>
+        <option value="rural-damascus">Rural Damascus</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button id="filterReset" class="btn btn-secondary w-100">Reset</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="container pb-5">
+  <div class="row g-4">
+ 
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="damascus" data-category="music" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/damascus.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Music Night</h5>
+            <p class="small mb-1">Umauyeen Square</p>
+            <p class="small text-muted mb-2">Simple student concert.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>25 Oct 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="aleppo" data-category="sports" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Aleppo.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>City Run</h5>
+            <p class="small mb-1">Mogambo</p>
+            <p class="small text-muted mb-2">Local fun run.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>12 Nov 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="homs" data-category="food" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Homs.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Food Fest</h5>
+            <p class="small mb-1">Rastan Square</p>
+            <p class="small text-muted mb-2">Street food stands.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>01 Jan 2026</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="hama" data-category="art" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Hama.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Art Show</h5>
+            <p class="small mb-1">Aasi Yard</p>
+            <p class="small text-muted mb-2">Local paintings.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>20 Oct 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="latakia" data-category="family" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Latakia.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Beach Day</h5>
+            <p class="small mb-1">Corniche</p>
+            <p class="small text-muted mb-2">Family games.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>15 Sep 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="tartus" data-category="culture" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Tartus.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Small Fair</h5>
+            <p class="small mb-1">Port Area</p>
+            <p class="small text-muted mb-2">Crafts & music.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>05 Nov 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="idlib" data-category="family" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/idlib.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Community Meet</h5>
+            <p class="small mb-1">Ibla City</p>
+            <p class="small text-muted mb-2">Friendly meetup.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>22 Aug 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="daraa" data-category="food" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Daraa.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Street Food</h5>
+            <p class="small mb-1">Sawame3</p>
+            <p class="small text-muted mb-2">Tasty stalls.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>02 Nov 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="sweida" data-category="art" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/swida.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Poetry Night</h5>
+            <p class="small mb-1">Theatre</p>
+            <p class="small text-muted mb-2">Soft music & poems.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>28 Nov 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="deir-ezzor" data-category="family" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Dier.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Family Day</h5>
+            <p class="small mb-1">Central Park</p>
+            <p class="small text-muted mb-2">Games & music.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>14 Feb 2026</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="raqqa" data-category="sports" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Riqa.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Football Cup</h5>
+            <p class="small mb-1">Dierah</p>
+            <p class="small text-muted mb-2">Youth teams.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>30 Dec 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="hasakah" data-category="culture" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Hasaka.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Cultural Day</h5>
+            <p class="small mb-1">Hasakah Castle</p>
+            <p class="small text-muted mb-2">Traditional show.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>11 Oct 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="quneitra" data-category="family" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Qoun.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Family Fun</h5>
+            <p class="small mb-1">Mamura Forest</p>
+            <p class="small text-muted mb-2">Kids area.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>19 Nov 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-4 event-card-container">
+      <div class="card p-3 bg-white" data-province="rural-damascus" data-category="culture" data-theme-card>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="./Assets/IMG/Reif.jpg" class="rounded-circle" style="width:80px;height:80px;object-fit:cover;">
+          <div>
+            <h5>Saidnaya Tour</h5>
+            <p class="small mb-1">Saidnaya</p>
+            <p class="small text-muted mb-2">Crafts & food.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small>29 Sep 2025</small><a href="event.html" class="btn btn-sm btn-primary">Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-dark text-white text-center p-4 mt-auto" data-theme-footer>
+  <p>© 2025 City Events Booker | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
